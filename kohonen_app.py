@@ -96,7 +96,6 @@ class SOMAgent:
         # Ensure the final iteration is logged if not already done
         if (self.n_max_iterations - 1) % 10 != 0:
             logger.info(f"Iteration {self.n_max_iterations}/{self.n_max_iterations} complete.")
-
         return self.weights
 
 # -------------------------------
