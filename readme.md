@@ -18,7 +18,8 @@ Vectorized operations are like having a high-speed scanner that processes many i
 
 ### How to Use the New System?
 
-`pip3 install -r requirements.txt`
+Install all the required libraries.
+    `pip3 install -r requirements.txt`
 
 To run the Application Locally and generate Batch Images & Start the Server:
 Run the script:

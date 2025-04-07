@@ -96,14 +96,7 @@ class SOMAgent:
         # Ensure the final iteration is logged if not already done
         if (self.n_max_iterations - 1) % 10 != 0:
             logger.info(f"Iteration {self.n_max_iterations}/{self.n_max_iterations} complete.")
-        # Plot and save the learning rate decay over iterations
-        plt.figure()
-        plt.plot(learning_rates)
-        plt.xlabel("Iteration")
-        plt.ylabel("Learning Rate")
-        plt.title("Learning Rate Decay Over Iterations")
-        plt.savefig("learning_rate_decay.png", bbox_inches="tight")
-        plt.close()
+
         return self.weights
 
 # -------------------------------
@@ -111,7 +104,7 @@ class SOMAgent:
 # -------------------------------
 if __name__ == '__main__':
     """
-    Main entry point for the script. 
+    Main entry point for the application. 
     It creates directories for saving images,generates sample data, trains the SOM, and saves the resulting images.
     The images are saved in two directories: 'images/small' and 'images/large'
     """
@@ -135,3 +128,4 @@ if __name__ == '__main__':
     som_large = SOMAgent(width=100, height=100, input_dim=3, n_max_iterations=1000)
     weights_large = som_large.train(input_data_large)
     plt.imsave(os.path.join(large_dir, f'1000_{timestamp}.png'), weights_large)
+    
