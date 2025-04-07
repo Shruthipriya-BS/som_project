@@ -10,8 +10,8 @@ This README highlights what was done in the old version and how the new changes 
 ## New Changes and Improvements:
 * All the SOM training logic is now encapsulated in a class called SOMAgent. This makes the code more organized
 
-* Instead of using multiple nested loops for updating each node’s weight, the new code precomputes grid coordinates and uses NumPy’s vectorized operations. This was done by:
-    Computing the Euclidean distances for all nodes at once using NumPy’s np.linalg.norm function on an array of precomputed grid coordinates. This is functionally the same metric (Euclidean distance), but it's done in a single, efficient vectorized operation instead of one node at a time.
+* Instead of using multiple nested loops for updating each node's weight, the new code precomputes grid coordinates and uses NumPy's vectorized operations. This was done by:
+    Computing the Euclidean distances for all nodes at once using NumPy's np.linalg.norm function on an array of precomputed grid coordinates. This is functionally the same metric (Euclidean distance), but it's done in a single, efficient vectorized operation instead of one node at a time.
 Vectorized operations are like having a high-speed scanner that processes many items at once instead of checking them one by one. This makes the training process much faster, especially on larger grids or with more data.
 
 * The new version uses Python's logging module to log progress (e.g., every 10 iterations).
@@ -23,12 +23,11 @@ Install all the required libraries.
 
 To run the Application Locally and generate Batch Images & Start the Server:
 Run the script:
-                `python kohonen_app.py`
-                
+    `python kohonen_app.py`
+
 This will generate sample SOM images and save them under:
 images/small (for a small 10x10 grid)
 images/large (for a large 100x100 grid)
-
 
 ### For Developers
 Modular and Maintainable Code:
