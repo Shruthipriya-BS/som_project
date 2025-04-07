@@ -1,0 +1,40 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# Test and coverage directories
+.tox/
+.nox/
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# Jupyter Notebook checkpoints and notebooks (if you want to ignore them)
+.ipynb_checkpoints/
+*.ipynb
+
+# Virtual environment directories
+.env
+.venv
+env/
+venv/
+
+# IDE-specific files
+.vscode/
+.idea/
+
+# Log files
+*.log
+
+# Generated images - ignore the images directory
+images/
+
+# Other temporary files
+*.tmp
