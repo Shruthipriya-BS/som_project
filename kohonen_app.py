@@ -28,12 +28,8 @@ logger = logging.getLogger(__name__)
 class SOMAgent:
     def __init__(self, width: int, height: int, input_dim: int, n_max_iterations: int, alpha0: float = 0.1):
         """
-        Constructor: Initializes a new instance of SOMAgent with a given grid size (width and height), 
+        Initializes a new instance of SOMAgent with a given grid size (width and height), 
         the dimensionality of the input vector (input_dim), maximum iterations, and an initial learning rate (alpha0).
-        self.sigma0: Sets the initial neighborhood radius as half of the larger grid dimension.
-        self.weights: Initializes a weight matrix randomly with shape (width, height, input_dim).
-        self.lmbda: Computes the time constant for exponential decay using the number of iterations and initial radius.
-        self.coords: Precomputes grid coordinates for each node in the SOM, which speeds up distance calculations later.
         """
         self.width = width
         self.height = height
@@ -98,9 +94,7 @@ class SOMAgent:
             logger.info(f"Iteration {self.n_max_iterations}/{self.n_max_iterations} complete.")
         return self.weights
 
-# -------------------------------
-# Main block for batch image generation
-# -------------------------------
+
 if __name__ == '__main__':
     """
     Main entry point for the application. 
