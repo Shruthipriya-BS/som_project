@@ -3,11 +3,13 @@ This project uses a Self Organizing Map (SOM) to help visualize complex, high-di
 
 This README highlights what was done in the old version and how the new changes improve the project. 
 
-## Old Implementation:
+## 🧠 Old Implementation:
 * All the work was done in one long function called train. 
 * The code used nested loops to update each node's weights. This approach worked for small datasets but could be slow on larger grids or data.
 
-## New Changes and Improvements:
+![!Assets/old_code.png](Assets/old_code.png)
+
+## 🚀 New Changes and Improvements:
 * All the SOM training logic is now encapsulated in a class called SOMAgent. This makes the code more organized
 
 * Instead of using multiple nested loops for updating each node's weight, the new code precomputes grid coordinates and uses NumPy's vectorized operations. This was done by:
@@ -15,6 +17,8 @@ This README highlights what was done in the old version and how the new changes 
 Vectorized operations are like having a high-speed scanner that processes many items at once instead of checking them one by one. This makes the training process much faster, especially on larger grids or with more data.
 
 * The new version uses Python's logging module to log progress (e.g., every 10 iterations).
+
+![Assets/new_code.png](Assets/new_code.png)
 
 ### How to Use the New System?
 
